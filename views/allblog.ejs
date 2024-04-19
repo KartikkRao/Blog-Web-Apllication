@@ -1,0 +1,11 @@
+<%- include('standard/header.ejs') %>
+<div class="myblog">
+<% if(locals.datas){ %>
+    <% datas.forEach(data=>{ %>
+        <a href="/allblog/<%= data.blogid %>" data-value=<%= data.blogid %> class="design fancy-link"> <%= data.title %>  <span class="author-name">- - - - - - <%= data.fname %> <%= data.lname %></span> </a>
+        <br>
+    <% })} else{ %>
+        <h1>Some error occured </h1>
+        <% } %>
+</div>
+<%- include('standard/footer.ejs') %>

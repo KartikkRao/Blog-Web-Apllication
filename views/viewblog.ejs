@@ -1,0 +1,20 @@
+<%- include('standard/header.ejs') %>
+
+<div class="viewblog">
+    <div class="viewblog-content">
+        <h1><%= data.title %></h1>
+        <h2><%= data.blogdate %></h2>
+        <p> <%- data.blog.replace(/\r\n/g, '<br>') %></p>
+        <form action="/updateBlog/<%= data.blogid %>" method="get">
+            
+            <button type="submit" class="update-button">Update Blog</button>
+        </form>
+        <form action="/deleteblog/<%= data.blogid %>" method="get">
+            
+            <button type="submit" class="update-button">Delete Blog</button>
+        </form>
+    </div>
+
+</div>
+
+<%- include('standard/footer.ejs') %>

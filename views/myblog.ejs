@@ -1,0 +1,13 @@
+<%- include('standard/header.ejs') %>
+<div class="myblog">
+ 
+<% if (locals.datas.length>0) { %>
+    <% datas.forEach(data => { %>
+        <a href="/myblog/<%= data.blogid %>" data-value="<%= data.blogid %>" class="design fancy-link"><%= data.title %></a>
+        <br><br>
+    <% }) %>
+<% } else { %>
+    <h1 class="noblog">You have no Blogs created</h1>
+<% } %>
+</div>
+<%- include('standard/footer.ejs') %>

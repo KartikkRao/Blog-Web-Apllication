@@ -1,0 +1,21 @@
+<%- include('standard/header.ejs') %>
+<div class="blog-contain">
+<form action="/blogs" method="post" class="blog-form">
+    <div>
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" class="blog-input">
+    </div>
+    <div>
+    <label for="date">Date:</label>
+    <input type="text" id="text" name="date" class="blog-input">
+    </div>
+    <div>
+    <label for="blog">Blog:</label>
+    <textarea id="blog" name="blog" rows="22" cols="150" resize="none" class="blog-textarea"></textarea>
+    </div>
+    <div>   
+    <input type="submit" value="Create" name="create" class="blog-submit">
+    </div>
+</form>
+</div>
+  <%- include('standard/footer.ejs') %>

@@ -1,0 +1,12 @@
+<%- include('standard/header.ejs') %>
+
+<div class="viewblog">
+    <div class="viewblog-content">
+        <h1><%= data.title %></h1>
+        <h2><%= data.blogdate %></h2>
+        <p> <%- data.blog.replace(/\r\n/g, '<br>') %></p>
+    </div>
+
+</div>
+
+<%- include('standard/footer.ejs') %>
